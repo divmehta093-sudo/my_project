@@ -7,24 +7,60 @@
 </head>
 <style>
     .container{
-        height: 150px;
-        width: 60px;
+        height: 500px;
+        width: 800px;
         background: gray;
         display: grid;
+        /* align-items: center; */
+        /* grid-template-columns: repeat(4, 200px); */
+        /* grid-template-columns: min-content 1fr 1fr min-content;
+         */
+         /* grid-template-columns: minmax(150px, 300px) 1fr 1fr min-content; */
+         /* grid-template-columns: repeat(2, 400px); */
+         grid-template-columns:fit-content(500px) fit-content(200px) 1fr 1fr;
+
+         /* grid-auto-rows: 100px; */
+
+         /* grid-template-rows: repeat(2, minmax(300px min-content)); */
 
     }
-    .items{
+    .items1{
         background: green;
+        
+    }
+     .items2{
+        background: rgb(128, 0, 0);
+    }
+     .items3{
+        background: rgb(0, 28, 128);
+    }
+     .items4{
+        background: rgb(128, 122, 0);
+        grid-column: span 2;
+    }
+     .items5{
+        background: rgb(105, 0, 128);
+        
+}
+        
+    
+     .items6{
+        background: rgb(0, 124, 128);
     }
 </style>
 <body>
     <div class="container">
-        <div class="items">first</div>
-        <div class="items">second</div>
-        <div class="items">third</div>
-        <div class="items">fourth</div>
-        <div class="items">fifth</div>
-        <div class="items">sixth</div>
+        <div class="items1">first</div>
+        <div class="items2">second </div>
+        <div class="items3">third</div>
+        <div class="items4">fourth </div>
+        <div class="items5">fifth</div>
+        <div class="items6">sixth</div>
+        <!-- <div class="items7">sixth</div>
+        <div class="items8">sixth</div> -->
+        
+    
+        
     </div>
 </body>
 </html>
