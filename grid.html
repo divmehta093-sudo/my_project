@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 500px;
+        width: 600px;
+        background: rgb(7, 7, 63);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        grid-template-areas: 
+        "sidebar header header box1"
+        "sidebar box2 box3 sidebar1"
+        "sidebar box4 box5 sidebar1";
+        
+
+    }
+    .items{
+        align-items: center;
+        color: white;
+    }
+    .sidebar{
+        background:rgb(98, 232, 83);
+        grid-area: sidebar;
+
+    }
+    .header{
+        background:rgb(98, 232, 83);
+        grid-area: header;
+    }
+    .sidebar1{
+       background:rgb(98, 232, 83);
+       grid-area: sidebar1;
+    }
+    .box1{
+        background:rgb(211, 65, 40);
+        grid-area: box1;
+    }
+    .box2{
+        background: orange;
+        grid-area: box2;
+    }
+    .box3{
+        background:rgb(211, 65, 40);
+        grid-area: box3;
+    }
+    .box4{
+        background:rgb(211, 65, 40);
+        grid-area: box4;
+    }
+    .box5{
+        background: orange;
+        grid-area: box5;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="items sidebar">sidebar</div>
+        <div class="items header">header</div>
+        <div class="items box1">box1</div>
+        <div class="items box2">box2</div>
+        <div class="items box3">box3</div>
+        <div class="items box4">box4</div>
+        <div class="items box5">box5</div>
+        <div class="items sidebar1">sidebar1</div>
+    </div>
+</body>
+</html>
