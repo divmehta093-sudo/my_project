@@ -1,10 +1,12 @@
-//  function canBorrowBook(mambarAge, hasValidCard, overdueBooks){
-//     if (mambarAge < 6 ) return alert("Too young- must be at least 6 year old"),false;
-//     if (!hasValidCard)  return alert("Invalid library card- please renew at the front desk"),false;
-//     if (overdueBooks > 0) return alert("please renew your x overdue book(s) first"),  false;
-//     else return alert("You may borrow up to 3 books") ,  true;
-// }
-// console.log(canBorrowBook(4, false, 1));
+ function canBorrowBook(mambarAge, hasValidCard, overdueBooks){
+    if (mambarAge < 6 ) return alert("Too young- must be at least 6 year old"),false;
+    if (!hasValidCard)  return alert("Invalid library card- please renew at the front desk"),false;
+    if (overdueBooks > 0) return alert("please renew your x overdue book(s) first"),  false;
+    else return alert("You may borrow up to 3 books") ,  true;
+}
+console.log(canBorrowBook(4, false, 1));
+
+
 
 function getWeatherAdvice(temperature, isRaining){
     if (temperature >= 35) return "too hot for hiking - stay indoors and hydrate";
@@ -18,3 +20,24 @@ function getWeatherAdvice(temperature, isRaining){
 }
 console.log(getWeatherAdvice(100, false));
 console.log(getWeatherAdvice(10, true));
+
+
+
+function calculateGrade(score, hasExtraCredit) {
+  if (score < 0 || score > 100) {
+    return "INVALID";
+  }
+  if (hasExtraCredit) {
+    score += 5;
+    if (score > 100) {
+      score = 100;
+    }
+  }
+  if (score >= 90) return "A";
+  if (score >= 80) return "B";
+  if (score >= 70) return "C";
+  if (score >= 60) return "D";
+  return "F";
+}
+
+console.log(calculateGrade(89, true));
