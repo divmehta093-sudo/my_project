@@ -10,14 +10,14 @@
         };;
     if (overdueBooks > 0) return {
             allowed: false,
-            message: "Please return your overdueBooks overdue book(s) first"
-        }};
+            message: `Please return your ${overdueBooks} overdue book(s) first`
+        }
+    };
    return {
         allowed: true,
         message: "You may borrow up to 3 books"
-    };
-}
-console.log(canBorrowBook(8, true, 0));
+    };}
+console.log(canBorrowBook(4, true, 5));
 
 
 
