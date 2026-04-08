@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function calculateParkingFee(hours, vehicleType){
+    if (hours <=0) return -1;
+
+    const rates = {
+       car: {first: 5, additional:3, max:30},
+       motorcycle: {first: 3, additional:2, max:18},
+       bus: {first:10, additional:7, max:60}  
+    };
+
+    if (!rates[vehicleType]) return -1;
+
+    const totalHours =Math.ceil(hours);
+
+    const {first, additional, max} = rates[vehicleType];
+
+    let fee;
+    if (totalHours === 1){
+        fee = first;
+    } else{
+        fee = first + (totalHours -1) * additional;
+    }
+
+    return Math.min(fee, max);
+}
+
+console.log(calculateParkingFee(1, "car"));
+</script>
+</body>
