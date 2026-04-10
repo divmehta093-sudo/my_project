@@ -34,6 +34,84 @@ function calculateParkingFee(hours, vehicleType){
 
 console.log(calculateParkingFee(1, "car"));
 console.log(calculateParkingFee(1, "abc"));
+console.log(calculateParkingFee(2.5, "motor"));
+
+
+//  The function
+// (a, b) => a - b
+
+// This is an arrow function that acts as a compare function for .sort().
+
+// How it works
+
+// When you call:
+
+// array.sort((a, b) => a - b)
+
+// JavaScript:
+
+// Takes two elements at a time from the array (a and b)
+// Runs the function
+// Uses the result to decide their order
+// What the return value means
+
+// For (a, b) => a - b:
+
+// Negative result → a comes before b
+// Positive result → b comes before a
+// 0 → keep their order the same
+// Example
+
+// Compare 25 and 100:
+
+// (25, 100) => 25 - 100 = -75
+
+// 👉 Negative → 25 goes before 100
+
+// Compare 42 and 8:
+
+// (42, 8) => 42 - 8 = 34
+
+// 👉 Positive → 8 goes before 42
+
+// Why this works
+
+// Subtracting:
+
+// Automatically gives a negative number when a < b
+// Positive when a > b
+
+// So it naturally sorts in ascending order.
+
+// Simple way to remember
+
+// 👉 (a, b) => a - b
+// = "small numbers first" (ascending)
+
+// 👉 (a, b) => b - a
+// = "big numbers first" (descending)
+
+// Quick visualization
+
+// Sorting [100, 25, 3]:
+
+// Compare 100 & 25 → 100 - 25 = 75 → swap
+// Compare 25 & 3 → 25 - 3 = 22 → swap
+// Final: [3, 25, 100]
+
+
+
+const ticketNumbers = [100, 25, 3, 42, 8];
+const sortedW = [...ticketNumbers].sort((a, b) => a - b);
+console.log(sortedW);
+
+const ticketNumber = [100, 25, 3, 42, 8];
+const sorted = [...ticketNumbers].sort((a, b) => b - a);
+console.log(sorted);
+
+
+
+
 
 </script>
 </body>
