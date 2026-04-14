@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maskAdhaar(aadhaarNumber){
+           if (typeof aadhaarNumber !== "string") {
+           return "INVALID";
+        }
+        if (aadhaarNumber.length !== 12) {
+             return "INVALID";
+         }
+          if (!/^\d{12}$/.test(aadhaarNumber)) {
+            return "INVALID";
+         }
+         let last4 = aadhaarNumber.slice(-4);
+
+          let masked = "XXXX-XXXX-" + last4;
+
+          return masked;
+        }
+
+        console.log(maskAdhaar("123412341234"));
+        console.log(maskAdhaar("123"));
+
+
+
+console.log("----------------------------------------------------------------------------")
+
+
+ function formatChaiMenu(items) {
+  if (!Array.isArray(items) || items.length === 0) {
+    return "";
+  }
+
+  return items
+    .filter(item =>
+      item &&
+      typeof item.name === "string" &&
+      item.name.trim() !== "" &&
+      typeof item.price === "number" &&
+      item.price > 0
+    )
+    .map(item =>
+      `${item.name.toUpperCase()} - Rs.${item.price}`
+    )
+    .join(" | ");
+}
+console.log(
+  formatChaiMenu([
+    { name: "masala chai", price: 15 },
+    { name: "samosa", price: 12 }
+  ])
+);
+console.log(formatChaiMenu([]));
+    </script>
+</body>
+</html>
